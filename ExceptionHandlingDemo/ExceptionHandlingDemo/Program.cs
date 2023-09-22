@@ -14,9 +14,32 @@ namespace ExceptionHandlingDemo
     {
         static void Main(string[] args)
         {
-            DividedByZeroException dividedByZeroException = new DividedByZeroException();
-            dividedByZeroException.Divide();
-            Console.ReadLine();
+
+            bool interested = true;
+            while (interested)
+            {
+                Console.WriteLine("Enter your choice.\n   1   -->   DivideByZeroException.\n   2   -->   FileNotFoundExceptions.\n" +
+                    "   0   -->   QUIT.");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        DividedByZeroException dividedByZeroException = new DividedByZeroException();
+                        dividedByZeroException.Divide();
+                        Console.ReadLine();
+                        break;
+                    case 2:
+                        FileNotFoundExceptions fileNotFoundExceptions = new FileNotFoundExceptions();
+                        fileNotFoundExceptions.FileExists();
+                        Console.ReadLine();
+                        break;
+                    case 0:
+                        interested = false;
+                        Console.WriteLine("Thanks for your interest.");
+                        Console.ReadLine();
+                        break;
+                }
+            }
         }
     }
 }
