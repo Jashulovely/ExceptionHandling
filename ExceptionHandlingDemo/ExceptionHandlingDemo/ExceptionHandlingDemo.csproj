@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayTypeMissMatch.cs" />
     <Compile Include="DividedByZeroException.cs" />
     <Compile Include="FileNotFoundExceptions.cs" />
+    <Compile Include="IndexOutOfRangeExceptions.cs" />
+    <Compile Include="NullReferenceExceptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
